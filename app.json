@@ -3,6 +3,7 @@
     "name": "RN-login",
     "slug": "RN-login",
     "version": "1.0.0",
+    "scheme": "rnlogin",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,7 +25,12 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "@react-native-community/datetimepicker"
+    ]
   }
 }
