@@ -1,11 +1,14 @@
 import '../../global.css'
-import { Stack } from 'expo-router';
+import { Stack, Tabs } from 'expo-router';
+import { KeyboardProvider } from "react-native-keyboard-controller";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index" />
-      <Stack.Screen name="storybook" options={{ headerShown: false }} />
-    </Stack>
+    <KeyboardProvider>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="storybook" />
+      </Stack>
+    </KeyboardProvider>
   );
 }
